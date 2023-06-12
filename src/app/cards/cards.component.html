@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="outerDiv">
+    <div class="searchDiv">
+        <div class="search-content">
+            <input type="text" placeholder="search" >
+            <button>search</button>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card" *ngFor="let employee of employees">
+            <div >
+                <button class="btn" (click)="deleteEmployee(employee.id)"><i class="fa fa-trash"></i></button>
+                <button class="btn" (click)="goUpdate(employee)"><i class="fa fa-pencil"></i></button>
+                <div class="imgDev">
+                    <img class="img" src="./assets/employee.png">
+                    <input type="file" id="imgbtn" class="fa fa-camera-retro fa-lg"  (change)="imageUploadAction($event,employee.id)"/> 
+                </div>
+                <h3 >name : {{employee.firstName}} {{employee.lastName}}</h3>
+                <h3 >work : {{employee.work}}</h3>
+                <h3 >telefon : {{employee.telefon}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

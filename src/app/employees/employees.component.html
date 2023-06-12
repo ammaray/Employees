@@ -1,0 +1,10 @@
+ 
+<form #addForm="ngForm" (ngSubmit)="addEmployee(addForm.value)">
+  <div class="outerAddForm">
+    <input ngModel type="text" name="firstName" placeholder="firstName" required="">
+    <input ngModel type="text" name="lastName" placeholder="lastName" required="">
+    <input ngModel type="text" name="work" placeholder="work" required="">
+    <input ngModel type="text" name="telefon" placeholder="phone" required="">
+    <button type="submit" (click)="addForm.resetForm">Add Employee</button>
+  </div>
+</form>
